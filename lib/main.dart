@@ -15,40 +15,31 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Row(
-            // mainAxisAlignment: MainAxisAlignment.start, // começo
-            // mainAxisAlignment: MainAxisAlignment.end, // final
-            // mainAxisAlignment:
-            //     MainAxisAlignment.spaceEvenly, // espaçado igualmente
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween, // espaçado
-            mainAxisAlignment: MainAxisAlignment.center, // centralizado
+            mainAxisAlignment: MainAxisAlignment.spaceBetween, // centralizado
             crossAxisAlignment: CrossAxisAlignment.stretch, // ocupa a tela toda
             children: [
               Container(
-                color: Colors.white,
+                color: Colors.red,
                 width: 100.0,
-                height: 100.0,
-                padding: EdgeInsets.all(10.0),
-                child: Text('Conteiner 1'),
               ),
-              SizedBox(
-                width: 20.0,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    color: Colors.yellow,
+                    width: 100.0,
+                    height: 100.0,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    width: 100.0,
+                    height: 100.0,
+                  ),
+                ],
               ),
               Container(
                 color: Colors.blue,
                 width: 100.0,
-                height: 100.0,
-                padding: EdgeInsets.all(10.0),
-                child: Text('Conteiner 2'),
-              ),
-              SizedBox(
-                width: 20.0,
-              ),
-              Container(
-                color: Colors.red,
-                width: 100.0,
-                height: 100.0,
-                padding: EdgeInsets.all(10.0),
-                child: Text('Conteiner 3'),
               ),
             ],
           ),
